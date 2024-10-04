@@ -1,12 +1,6 @@
-
-
-function signUpUser(firstName, lastName) {
-    if (firstName && lastName) {
-        return firstName + lastName
-    } else {
-        return "Null"
-    }
+// Return simple promise
+export default function signUpUser(firstName, lastName) {
+  if (firstName && lastName) {
+    return Promise.resolve({firstName: firstName, lastName: lastName})
+  }
 }
-
-
-console.log(signUpUser("ahmed", "ali"));
