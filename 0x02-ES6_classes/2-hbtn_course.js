@@ -2,10 +2,10 @@
 
 export default class HolbertonCourse {
   // Constructing object values
-  constructor(name, length, students) {
-    typeof name === 'string' ? this._name = name : (() => { throw new TypeError('Name must be a string'); })();
-    typeof length === 'number' ? this._length = length : (() => { throw new TypeError('Length must be a number'); })();
-    Array.isArray(students) ? this._students = students : (() => { throw new TypeError('Students type must be an Array'); })();
+  constructor(name, length, students) { // eslint-disable-next-line no-unused-expressions
+    typeof name === 'string' ? this._name = name : (() => { throw new TypeError('Name must be a string'); })(); // eslint-disable-next-line no-unused-expressions
+    typeof length === 'number' ? this._length = length : (() => { throw new TypeError('Length must be a number'); })(); // eslint-disable-next-line no-unused-expressions
+    Array.isArray(students) ? this._students = students : (() => { throw new TypeError('Students type must be an Array'); })(); // eslint-disable-next-line no-unused-expressions
   }
 
   // Name getter and setter
