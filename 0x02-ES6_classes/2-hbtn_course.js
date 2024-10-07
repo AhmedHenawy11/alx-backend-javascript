@@ -4,8 +4,8 @@ export default class HolbertonCourse {
     // Constructing object values
     constructor(name, length, students) {
         typeof name === 'string' ? this._name = name : (() => { throw new TypeError('Name must be a string'); })();
-        typeof name === 'number' ? this._length = length : (() => { throw new TypeError('Length must be a number'); })();
-        Array.isArray(students) ? this._students = students : (() => { throw new TypeError('Students must be an array') })();
+        typeof length === 'number' ? this._length = length : (() => { throw new TypeError('Length must be a number'); })();
+        Array.isArray(students) ? this._students = students : (() => { throw new TypeError('Students type must be an Array') })();
     }
 
     // Name getter and setter
@@ -14,7 +14,7 @@ export default class HolbertonCourse {
     }
 
     set name(val) {
-        if (typeof val !== 'string') throw new TypeError('name must be a string');
+        if (typeof val !== 'string') throw new TypeError('Name must be a string');
         this._name = val;
     }
 
@@ -24,7 +24,7 @@ export default class HolbertonCourse {
     }
 
     set length(val) {
-        if (!Number.isInteger(val)) throw new TypeError('length must be a number');
+        if (!Number.isInteger(val)) throw new TypeError('Length must be a number');
         this._length = val;
     }
 
@@ -34,7 +34,7 @@ export default class HolbertonCourse {
     }
 
     set students(val) {
-        if (!Array.isArray(val)) throw new TypeError('students type must be an Array');
+        if (!Array.isArray(val)) throw new TypeError('Students type must be an Array');
         this._students = val;
     }
 }
