@@ -16,7 +16,7 @@ export default class Pricing {
   }
 
   // currency getter & setter
-  get currencyt() {
+  get currency() {
     return this._currency;
   }
 
@@ -28,4 +28,7 @@ export default class Pricing {
     return `${this._amount} ${this._currency._name} (${this._currency._code})`;
   }
 
+  static convertPrice(amount, conversionRate) {
+    return (amount * conversionRate);
+  }
 }
