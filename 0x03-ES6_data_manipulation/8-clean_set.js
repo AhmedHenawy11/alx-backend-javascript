@@ -7,7 +7,7 @@ export default function cleanSet(set, string) {
   let words = '';
 
   const filteredArr = [...set].filter((element) => element.slice(0, length) === string);
-  const cuttedWords = filteredArr.map((element) => (element.slice(length, element.length - 1)));
+  const cuttedWords = filteredArr.map((element) => (element.slice(length, element.length)));
 
   cuttedWords.forEach((element) => {
     words += element;
