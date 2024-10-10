@@ -14,7 +14,7 @@ export default function updateStudentGradeByCity(students, city, newGrades) {
       student.grade = grade[0].grade; // Safe: grade[0] exists
     } else {
       // eslint-disable-next-line
-      student.grade = null; // No grade found, handle gracefully
+      student.grade = 'N/A'; // No grade found, handle gracefully
     }
 
     return student;
