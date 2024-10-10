@@ -1,19 +1,10 @@
+/* eslint-disable array-callback-return */
 export default function cleanSet(set, string) {
   if (string === undefined || string.length === 0) {
     return '';
   }
-
-  const { length } = string;
-  let words = '';
-
-  const filteredArr = [...set].filter((element) => element.slice(0, length) === string);
-  const cuttedWords = filteredArr.map((element) => (element.slice(length, element.length)));
-
-  cuttedWords.forEach((element) => {
-    words += element;
-    // eslint-disable-next-line
-    element !== cuttedWords[cuttedWords.length - 1] ? words += '-' : words += '';
-  });
-
-  return words;
+  return [...set]
+    .filter((str) => (str !== undefined ? str.startsWith(string) : ''))
+    .map((str) => (str !== undefined ? str.slice(string.length) : ''))
+    .join('-');
 }
